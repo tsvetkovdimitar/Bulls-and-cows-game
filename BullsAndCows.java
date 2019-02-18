@@ -135,9 +135,6 @@ public class BullsAndCows extends JFrame implements ActionListener {
         //register this frame as an action listener of the text field
         inputLine.addActionListener(this);
 
-        //register this frame as an action listener of the text field
-        inputLine.addActionListener(this);
-
         //add a text area with a cyan border around it and scrollbars
         textArea = new JTextArea();
         textArea.setEditable(false);
@@ -165,7 +162,7 @@ public class BullsAndCows extends JFrame implements ActionListener {
         int guess = Integer.parseInt(numString);
 
         //ake sure a guess is a valid one
-        if((guess/1000) <= 0 || (guess/1000) >= 10){
+        if((guess / 1000) <= 0 || (guess / 1000) >= 10){
 
             JOptionPane.showMessageDialog(null, "Please enter a four-digit number without repeats or zeros.");
             numOfGuesses--;
@@ -193,7 +190,7 @@ public class BullsAndCows extends JFrame implements ActionListener {
 
                     for(int j = 0; j < 4; j++){
 
-                        if((number / (int) Math.pow(10, j)) % 10 == (guess / (int) Math.pow(10, j) % 10)){
+                        if((number / (int) Math.pow(10, i)) % 10 == (guess / (int) Math.pow(10, j) % 10)){
 
                             cows++;
 
